@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>If alternatives</title>
+  </head>
+  <body>
+    <script>
+      // let age = 32;
+      // let result;
+      // if (age > 18) {
+      //   result = 'Adult';
+      // } else {
+      //   result = 'Kid'
+      // }
+      // console.log(result);
+
+      /* Ternary operator: condition ? trueValue : falseValue */
+      // let age = 32;
+      // let result = age > 18 ? 'Adult' : 'Kid';
+      // console.log(result);
+
+      /* 
+        - Guard operator: value || defaultValue 
+        - consider null, undefined, false, "", NAN, 0 (i.e everyrthing as falsy)
+        - use when a fallback value is needed
+      */
+      let age = 0; /*as age=0 is a falsy value, so finalAge=falsy||18=>18*/
+      /* for let age; since it is undefined, finalAge will be 18 */
+      let finalAge = age || 18;
+      console.log(age);
+      console.log(finalAge);
+
+      /* 
+        - Default operator: value ?? fallbackValue
+        - use when you want to consider only null and undefined as falsy and do not consider 0,NAN,"" as falsy(diff between guard and default operator)
+      */
+      // let age;
+      // let finalAge = age ?? 18;
+      // console.log(age);
+      // console.log(finalAge);
+    </script>
+  </body>
+</html>

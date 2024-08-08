@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Practise Exercise</title>
+</head>
+<body>
+  <p id="name-display"></p>
+
+  <script>
+    const myName = 'Samiul Haque';
+    document.querySelector('#name-display').innerText = myName; //putting content to <p>
+    
+    //some calculation which will be shown in console
+    const GSTpercentage = 18;
+    let val= ((15599 - (10/100 * 15599)) - 272 + (2499 - (41/100*2499)) - 29 + 25 + 20);
+    let cartValue = Math.round(val * (100 + GSTpercentage) / 100);
+    console.log('cart value is: ' + cartValue);
+
+    //using eval('') function-->it take input as string and do the calculation
+    console.log('Using eval() method: ' + eval('2+3+5*7-9'));
+  </script>
+</body>
+</html>

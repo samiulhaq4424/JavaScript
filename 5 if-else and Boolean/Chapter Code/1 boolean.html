@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boolean</title>
+  </head>
+  <body>
+    <script>
+      console.log(typeof (6 > 9)); //it will give boolean
+      // console.log(typeof true); //it will give boolean
+      // console.log(typeof 'true');  //it will give string
+
+      // console.log(!true); //false
+      // console.log(!false); //true
+
+      // console.log(5 == 5); //true
+      // console.log(5 == 4); //false
+
+      /* ==  checks equality, similarly we have != */
+      // console.log(5 == 5.0); //true
+      // console.log(5 == '5.0'); //true
+      // console.log(5 == '5'); //true
+
+      /* === checks value and type equality, similarly we have !==  */
+      // console.log(5 == 5.0); //true
+      // console.log(5 === '5'); //false
+      // console.log(5 === '5.0'); //false
+
+      /*order of comparison operators are less than arithmatic operators*/
+      // console.log(5 + 5 === 4 + 6); //true
+
+      console.log("Checking if you can drive");
+      let age = 21;
+      if (age > 65) {
+        console.log("Please ask someone else to drive you");
+      } else if (age > 18) {
+        console.log("You can drive");
+      } else {
+        console.log("Use a Bicycle");
+      }
+    </script>
+  </body>
+</html>

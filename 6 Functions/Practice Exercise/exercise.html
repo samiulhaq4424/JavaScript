@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Practice Exercise</title>
+</head>
+<body>
+  <script>
+    function isOdd(number) {
+      /*
+        let rem = number % 2;
+        let isOdd = (rem == 1);
+        return isOdd;
+      */
+      if(number % 2 ==1){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
+    console.log('Is number odd: ' + isOdd(4));
+    console.log('Is number odd: ' + isOdd(5));
+    console.log('Is number odd: ' + isOdd(0));
+    console.log('Is number odd: ' + isOdd(9999));
+    console.log('\n');
+
+    function larger(num1, num2) {
+      /*
+      if (num1 > num2) {
+        return num1;
+      } else {
+        return num2;
+      }
+      */
+      return num1 > num2 ? num1 : num2;
+    }
+    console.log('Larger no is ' + larger(4, 5));
+    console.log('Larger no is ' + larger(5, 5));
+    console.log('Larger no is ' + larger(4786, 765));
+    console.log('\n');
+
+    function toFahrenheit(celsiusValue) {
+      return (9/5*celsiusValue) + 32;
+    }
+    console.log('Celsius to Fahrenheit: ' + toFahrenheit(38));
+    console.log('Celsius to Fahrenheit: ' + toFahrenheit(0));
+    console.log('Celsius to Fahrenheit: ' + toFahrenheit(100));
+    console.log('\n');
+  </script>
+</body>
+</html>

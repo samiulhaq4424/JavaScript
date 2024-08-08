@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Toggle Example</title>
+    <style>
+      #btn{
+        height: 50px;
+        width: 100px;
+        background-color: lightcoral;
+        border-radius: 10px;
+      }
+      .hidden {
+        display: none;
+      }
+      .visible {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv" class="hidden div1">Hello World......!</div>
+    <button id="btn" onclick="toggleVisibility()">Toggle Visibility</button>
+
+    <script>
+      function toggleVisibility() {
+        const myDiv = document.querySelector('#myDiv');
+        myDiv.classList.toggle('hidden'); //toggle will remove the class if present, if not present it will add the class
+        // myDiv.classList.remove("hidden"); //remove will not work here as it can't add class
+        // Ensure 'visible' is removed when 'hidden' is present and vice versa
+        if (myDiv.classList.contains('hidden')) {
+          myDiv.classList.remove('visible');
+        } else {
+          myDiv.classList.add('visible');
+        }
+      }
+    </script>
+  </body>
+</html>

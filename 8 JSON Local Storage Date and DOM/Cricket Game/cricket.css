@@ -1,0 +1,19 @@
+body { /*sab center me ayega*/
+  text-align: center;
+}
+
+.choice-button {
+  height: 100px;
+  width: 100px;
+  border: none;
+  margin: 10px;
+  background-color: lightseagreen;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.choice-image {
+  height: 75px;
+  /* not writing width to maintain the aspect ratio, uncomment below to see- image will be bad */
+  /* width: 75px; */
+}

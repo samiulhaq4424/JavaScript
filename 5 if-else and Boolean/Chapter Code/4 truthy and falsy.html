@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Truthy And Falsy</title>
+  </head>
+  <body>
+    <script>
+      /*
+      -Falsy values: 0, null, undefined, false, NAN(not a number), ""(empty string)
+      -Truthy values: All values not listed as falsy
+    */
+
+      // let age; //if passed to if-else then printed: undefined (means value of age is not defined yet)
+      // let age=0; // printed: Aap avtaar hain (as 0 is falsy)
+      // let age=false; // printed: Aap avtaar hain (as false is falsy)
+      // let age=""; // printed: Aap avtaar hain (as "" is falsy)
+      // let age=null; // printed: Aap avtaar hain (as null is falsy)
+      let age = 4 / "horse"; // value of age=NAN which is falsy as 4 can't be divided by string 'horse'
+      console.log(age);
+      if (age) {
+        console.log("You have a valid age");
+      } else {
+        console.log("Aap avtaar hain");
+      }
+    </script>
+  </body>
+</html>

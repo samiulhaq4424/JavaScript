@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practise Set</title>
+  </head>
+  <body>
+    <script>
+      let product = {
+        name: "Jeans",
+        size: "S",
+        fit: "Slim Fit",
+        "delivery-time": "Same day delivery",
+      };
+      // let copyProduct = product; //copying object "product" to "copyProduct"
+      // console.log(product);
+      // copyProduct.size = 'M';
+      // console.log(product);
+      // copyProduct.fit = 'Regular Fit';
+      // console.log(product);
+
+      console.log(product["delivery-time"]);
+
+      let obj = {
+        message: "Good Job",
+        status: "Complete",
+      };
+      console.log(obj);
+      let { message, status } = obj;
+      console.log(message);
+      console.log(status);
+
+      function isIdenticalProduct(product1, product2) { //function to compare 2 objects for their products
+        if (typeof product1 !== "object" || typeof product2 !== "object") {
+          console.warn("Parameter passed was not an object");
+          return false;
+        }
+
+        if (product1 == product2) {//checking if reference/address of both objects are same
+          return true;
+        }
+        /*here we are not comparing delivery-time, if you want you can do*/
+        if (product1.name === product2.name && product1.size === product2.size && product1.fit === product2.fit) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      let product2 = {
+        name: "Jeans",
+        size: "M",
+        fit: "Slim Fit",
+        "delivery-time": "Same day delivery",
+      };
+
+      let product3 = {
+        name: "Jeans",
+        size: "M",
+        fit: "Slim Fit",
+        "delivery-time": "Same day delivery",
+      };
+      let product4 = product2;
+      console.log(isIdenticalProduct(product, "")); //will give warning as we are not passing second object
+      console.log(isIdenticalProduct(product, product)); //true as both have same reference
+      console.log(isIdenticalProduct(product, product2)); //false
+      console.log(isIdenticalProduct(product3, product2)); //true
+      console.log(isIdenticalProduct(product2, product4)); //true as both have same reference
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JSON</title>
+    <!-- 
+        1) Fullform of JSON: JavaScript Object Notation 
+        2) JSON.stringify() : When receiving data from a web server, the data is always a string. Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+        3)JSON.parse() : When sending data to a web server, the data has to be a string. Convert a JavaScript object into a string   with JSON.stringify().
+  -->
+  </head>
+  <body>
+    <script>
+      // let product = {
+      //   name: "TShirt",
+      //   price: 789,
+      //   rating: { //object ke andar object
+      //     stars: 4.5,
+      //     noOfReviews: 453,
+      //   },
+      // };
+      // console.log(typeof product); //output: object
+      // console.log(product);
+      // let str = JSON.stringify(product); //object is converted to string
+      // console.log(typeof str); //output: string 
+      // console.log(str); //output: {"name":"TShirt","price":789,"rating":{"stars":4.5,"noOfReviews":453}}
+
+      // let newProduct = JSON.parse(str); //string is converted to object
+      // console.log(typeof newProduct); //output: object
+      // console.log(newProduct);
+
+      /**********************************************************************************/
+
+      let product = {
+        name: 'TShirt',
+        price: 789,
+        rating: {
+          stars: 4.5,
+          noOfReviews: 453,
+        },
+      };
+      
+      // localStorage.setItem('Name', 'Samiul Haque'); //localStorage.setItem('key', it's value) : stores data as key-value pairs and both should be strings
+      // localStorage.setItem('Price', '87656');
+      // console.log(localStorage.getItem('Name')); //even if you comment above two lines, if this line is run, it will take the value from local storage
+
+
+      localStorage.setItem('product', JSON.stringify(product)); //converted to string as both parameters should be string
+      let product2 = JSON.parse(localStorage.getItem('product')); // to get the string {"name":"TShirt","price":789,"rating":{"stars":4.5,"noOfReviews":453}} from local storage and converting it to JavaScript object
+      console.log(product2);
+
+      // localStorage.removeItem('Price'); //to remove item from local storage
+      // localStorage.clear(); //to clear the entire local storage
+
+      /*In local storage, Do not store sensitive information. Viewable in storage console*/
+    </script>
+  </body>
+</html>

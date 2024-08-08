@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM</title>
+</head>
+<body>
+  <button class="one two three">button1</button>
+  <button class="my-button2">button2</button>
+  <button class="my-button3">button3</button>
+  <br><br>
+  <div class="my-div">This is the div</div>
+
+  <script>
+    /**************************DOM Properties & Methods**************************/
+
+    console.log(document.location); //will output the current URL of the document
+
+    console.log(document.title); // gives title of page: 'DOM'
+    document.title = 'Samiul'; //now title changed from 'DOM' to 'Samiul'
+    console.log(document.title); // gives title of page: 'Samiul'
+
+    console.log(document.domain); //gives '127.0.0.1'
+
+
+    console.log(document.querySelector('button').classList);// it will log the classList(all classes) of the first button element to the console it will find in the document
+    console.log(document.querySelector('button').classList.add('four')); // will 'add' class 'four' to first button
+    console.log(document.querySelector('button').classList);// output: DOMTokenList(4) ['one', 'two', 'three', 'four', value: 'one two three four'], see the html part in inspect
+    console.log(document.querySelector('button').classList.remove('three'));// will 'remove' class 'three' to first button
+    console.log(document.querySelector('button').classList);//output: DOMTokenList(3) ['one', 'two', 'four', value: 'one two four']
+    console.log(document.querySelector('button').classList.replace('four', 'five'));//replace class 'four' to 'five'
+    console.log(document.querySelector('button').classList);//output: DOMTokenList(3) ['one', 'two', 'five', value: 'one two five']
+    console.log(document.querySelector('button').classList.contains('three'));//check if class 'three' is present, output:false
+    //discuss about toggle() in 4
+
+    
+    let button = document.createElement('Button');//button is created: <button></button>
+    button.innerText = 'Click Me';//now we have <button>Click Me</button>
+    button.className = "btn";
+    document.querySelector('.my-div').appendChild(button);//button is added inside div(see in inspect)
+    // document.querySelector('.my-div').removeChild(button);//to remove child
+    
+    /*
+    // similarly using replaceChild(new,old)
+    let button1 = document.createElement('Button');//button is created: <button></button>
+    button1.innerText = 'New Button';//now we have <button>Click Me</button>
+    button1.id = "new-btn";//to add class to new button <button class="new-btn">Click Me</button>
+    let oldbutton = document.querySelector('.btn');
+    document.querySelector('.my-div').replaceChild(button1,oldbutton);
+    */
+  </script>
+</body>
+</html>

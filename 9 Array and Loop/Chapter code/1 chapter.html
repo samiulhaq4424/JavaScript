@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      /*******************************************************************/
+
+      let numbers = [1,4,3,7,5,6,7,2];
+      console.log(numbers);
+      console.log(numbers.length); // to find length of array
+      console.log(numbers[5]);
+
+      /*******************************************************************/
+
+      // let obj = { //object 'obj' created
+      //   lkj: 98
+      // };
+      // let doosra = [1, true, null, 'asdfasd', 'samiul haque', {likes: '1 Million'}]; //array doosra have object also in it
+      // console.log(doosra[1]); //output: true
+      // console.log(doosra[2]); //output: null
+      // console.log(doosra[3]); //output: asdfasd
+      // console.log(doosra[4]); //output: samiul haque
+      // console.log(doosra[5]); //output: {likes: '1 Million'}
+      // console.log(doosra[5].likes); //output: 1 Million
+      // console.log(typeof doosra); //output: object (array is a special type of object)
+      // console.log(doosra.length);//output: 6
+
+      // console.log(Array.isArray(doosra)); //output: true (to check if a variable/object is an array: Array.isArray(name of variable))
+      // console.log(Array.isArray(obj)); //output: false (as obj is an object which is not an array)
+
+      /*******************************************************************/
+      
+      // let arr = [1,2,3];
+      // console.log(arr); // [1, 2, 3]
+      // arr.push(6);
+      // console.log(arr); // [1, 2, 3, 6] - 6 added to end of array
+      // let num1 = arr.pop(); //returns last element which is popped i.e 6
+      // console.log('popped ' + num1);
+      // console.log(arr); // [1, 2, 3] - last element 6 is popped
+
+      // console.log('popped ' + arr.pop()); 
+      // console.log(arr); // [1, 2] - last element 3 is popped
+
+
+      // console.log(arr.unshift(-2,-1,0)); //it adds element at the beginning, modifies the Array to [-2, -1, 0, 1, 2] and returns the New Length
+      // console.log(arr); // [-2, -1, 0, 1, 2]
+
+      // let num2 = arr.shift(); //removes the first element from an array and returns that removed element, i.e -2
+      // console.log('element removed: ' + num2); // element removed: -2
+      // console.log(arr); // [-1, 0, 1, 2]
+      // console.log('element removed: ' + arr.shift()); // element removed: -1
+      // console.log(arr); // [0, 1, 2]
+
+      /*******************************************************************/
+
+      /*splice(start, deleteCount, item1, item2, ...., itemN): changes the contents of an array by removing or replacing existing elements and/or adding new elements in place and return an array containing the deleted elements.*/
+
+      // let arr = [3,5,7,6,8,9];
+      // console.log(arr); // [3, 5, 7, 6, 8, 9]
+
+      // arr.splice(1, 3); //removes element from index 1 to 3
+      // console.log(arr); // [3, 8, 9]
+
+      // arr.splice(1, 0, 'Feb'); //insert 'Feb' at index 1, no deletion as deleteCount is 0
+      // console.log(arr); // [3, 'Feb', 8, 9]
+
+      // arr.splice(3, 1, 'May'); // Replaces 9 element at index 3 to 'May'
+      // console.log(arr); // [3, 'Feb', 8, 'May']
+
+      // console.log(arr.slice(1,3)); //return element from 1<=index<3 i.e ['Feb', 8] which are deleted element
+
+      /*******************************************************************/
+      
+      // let arr = [9, 8, 5, 7, 6];
+      // console.log(arr); // [9, 8, 5, 7, 6]
+      // console.log(arr.toString()); // 9,8,5,7,6 (returns a string representing the specified array and its elements.)
+      // console.log(arr); // [9, 8, 5, 7, 6] (array abhi bhi waisa hi hai)
+
+      /*******************************************************************/
+
+      // let arr = [9, 8, 5, 7, 6];
+      // console.log(arr); // [9, 8, 5, 7, 6]
+      // arr.sort(); // When sorting numbers, the sort() method converts them to 'strings' and then sorts them based on lexicographically (dictionary order). As a result, the numbers are sorted as strings, not numerically.
+      // console.log(arr); // [5, 6, 7, 8, 9]
+
+      // let months = ['March', 'Jan', 'Feb', 'Dec'];
+      // months.sort(); // strings are sorted lexicographically (dictionary order).
+      // console.log(months); // ['Dec', 'Feb', 'Jan', 'March']
+      // months = ['March', 'Jan', 'Feb', 'Dec'];
+      // months.sort((a, b) => { 
+      //   // To sort strings in descending order, you can use the sort() method with a compare function that sorts strings in reverse lexicographical order.
+      //   if (a > b) return -1;
+      //   if (a < b) return 1;
+      //   return 0;
+      // });
+      // console.log(months);
+
+      
+
+      // array1 = [1, 30, 4, 21, 100000];
+      // array1.sort(); // When sorting numbers, the sort() method converts them to 'strings' and then sorts them based on lexicographically (dictionary order). As a result, the numbers are sorted as strings, not numerically.
+      // console.log(array1); // [1, 100000, 21, 30, 4]
+      // //To sort numbers correctly, you need to provide a compare function to sort()
+      // array1.sort((a, b) => a - b); //compare function (a, b) => a - b sorts numbers in ascending numerical order.
+      // console.log(array1); // [1, 4, 21, 30, 100000]
+      // array1.sort((a, b) => b - a); //compare function (a, b) => a - b sorts numbers in descending numerical order.
+      // console.log(array1); // [100000, 30, 21, 4, 1]
+
+      /*******************************************************************/
+
+      // let arr2 = [9, 8, 5, 7, 6];
+      // // valueOf() method returns the array itself, arr2.valueOf() returns the same as arr2 
+      // console.log(arr2.valueOf()); //i.e [9, 8, 5, 7, 6]
+      // let arr3 = arr2; // arr3 is just a new to reference to object arr2
+      // arr3[0] = 99;
+      // console.log(arr2); // [99, 8, 5, 7, 6]
+      // console.log(arr2); // [99, 8, 5, 7, 6]
+
+      /*******************************************************************/
+
+      // let arr4 = [9, 8, 5, 7, 6];
+      // let [a, b, c, d] = arr4; //destructuring array arr4
+      // console.log(a + " " + b + " " + c + " " + d); //output: 9 8 5 7
+
+    </script>
+  </body>
+</html>

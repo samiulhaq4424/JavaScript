@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Date</title>
+</head>
+<body>
+  <button class="one two three">button</button>
+  <button class="my-button2">button</button>
+  <button class="my-button3">button</button>
+  <br><br>
+  <div class="my-div">This is the div</div>
+
+  <script>
+    /**************************DATE**************************/
+    let myDate = new Date(); //object myDate is created 
+    console.log(myDate);
+    console.log('Time: ' + myDate.getTime()); // returns the number of milliseconds since January 1, 1970 00:00:00
+    console.log('Year: ' + myDate.getFullYear()); //current year
+    console.log('Day: ' + myDate.getDay()); //returns the day of the week (0 to 6) of a date. Sunday = 0, Monday = 1, ... 
+    console.log('Hours: ' + myDate.getHours());
+    console.log('Minutes: ' + myDate.getMinutes());
+    console.log('Seconds: ' + myDate.getSeconds());
+    console.log('Milliseconds: ' + myDate.getMilliseconds());
+  </script>
+</body>
+</html>
