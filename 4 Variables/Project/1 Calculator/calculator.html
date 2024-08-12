@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="calculator.css">
+  <link rel="stylesheet" href="./calculator.css">
   <title>Calculator</title>
 </head>
 <body>
   <div id="calculator">
-    <!-- input is used for dispplay of calculator and "readonly" is used as we don't want to enter anything in input box-->
+    <b>CASIO</b>
+    <!-- input is used for display of calculator and "readonly" is used as we don't want to enter anything in input box-->
     <input type="text" id="display" readonly> 
     <div class="button-container">
       <!-- as 'C' is used to clear the display so we are using currentDisplay = '', so nothing will be displayed -->
       <button class="button"
-      onclick="currentDisplay = ''; document.querySelector('#display').value = currentDisplay;">
+      onclick="currentDisplay = ''; 
+      document.querySelector('#display').value = currentDisplay;">
       C
       </button>
       <button class="button" 

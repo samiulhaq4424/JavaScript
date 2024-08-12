@@ -20,6 +20,7 @@
       // };
       // console.log(typeof product); //output: object
       // console.log(product);
+      // console.log(product.rating.stars); //output: 4.5
       // let str = JSON.stringify(product); //object is converted to string
       // console.log(typeof str); //output: string 
       // console.log(str); //output: {"name":"TShirt","price":789,"rating":{"stars":4.5,"noOfReviews":453}}
@@ -39,16 +40,16 @@
         },
       };
       
-      // localStorage.setItem('Name', 'Samiul Haque'); //localStorage.setItem('key', it's value) : stores data as key-value pairs and both should be strings
-      // localStorage.setItem('Price', '87656');
-      // console.log(localStorage.getItem('Name')); //even if you comment above two lines, if this line is run, it will take the value from local storage
+      localStorage.setItem('Name', 'Samiul Haque'); //localStorage.setItem('key', it's value) : stores data as key-value pairs and both should be strings
+      localStorage.setItem('Price', '87656');
+      console.log(localStorage.getItem('Name')); //even if you comment above two lines, if this line is run, it will take the value from local storage
 
 
       localStorage.setItem('product', JSON.stringify(product)); //converted to string as both parameters should be string
       let product2 = JSON.parse(localStorage.getItem('product')); // to get the string {"name":"TShirt","price":789,"rating":{"stars":4.5,"noOfReviews":453}} from local storage and converting it to JavaScript object
       console.log(product2);
 
-      // localStorage.removeItem('Price'); //to remove item from local storage
+      localStorage.removeItem('Price'); //to remove item from local storage
       // localStorage.clear(); //to clear the entire local storage
 
       /*In local storage, Do not store sensitive information. Viewable in storage console*/

@@ -1,6 +1,6 @@
 1) For Strings-
-->we can use "" / ''/ `` for strings
-->generally we will try to use '' / ``
+->we can use "" or '' or `` for strings
+->generally we will try to use '' or ``
 ->example: 
 a) 'Rs' + (100*2+50)
     output: Rs 250
@@ -29,8 +29,20 @@ ________________________________________________________________________________
 output: 'string'
 -> typeof 123
 output: 'number'
--> typeof 2.3  //for integer of float numbers, both are recognized as numbers
+-> typeof 2.3  //for integer or float numbers, both are recognized as numbers
 output: 'number'
 -> typeof (11==11)
 output: 'boolean'
 _____________________________________________________________________________________________________
+The prompt() function in JavaScript is used to display a dialog box that prompts the user to input some text. The text that the user enters is returned as a string. If the user clicks "OK" without entering any text, an empty string ("") is returned. If the user clicks "Cancel," null is returned.
+
+let userInput = prompt("Enter your number:");
+
+// If the user enters "42" and clicks "OK":
+console.log(userInput); // Output: "42"
+
+// If the user clicks "Cancel," the value of userInput will be null.
+console.log(userInput); // Output: null
+
+// If the user doesn't type anything and just clicks "OK," the value of userInput will be an empty string "".
+console.log(userInput); // Output: ""

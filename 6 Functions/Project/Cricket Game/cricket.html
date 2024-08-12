@@ -11,23 +11,24 @@
 </head>
 <body>
   <h1>Bat Ball Stump Game</h1>
+
   <button onclick="
   let computerChoice1 = generateComputerChoice();
   let resultMsg1 = getResult('Bat', computerChoice1);
-  showResult('Bat', computerChoice1, resultMsg1);
-  ">Bat</button>
+  showResult('Bat', computerChoice1, resultMsg1);">
+  Bat</button>
 
   <button onclick="
     let computerChoice2 = generateComputerChoice();
     let resultMsg2 = getResult('Ball', computerChoice2);
-    showResult('Ball', computerChoice2, resultMsg2);
-  ">Ball</button>
+    showResult('Ball', computerChoice2, resultMsg2);">
+    Ball</button>
 
   <button onclick="
     let computerChoice3 = generateComputerChoice();
     let resultMsg3 = getResult('Stump', computerChoice3);
-    showResult('Stump', computerChoice3, resultMsg3);
-  ">Stump</button>
+    showResult('Stump', computerChoice3, resultMsg3);">
+    Stump</button>
 
   <script>
     function generateComputerChoice() {

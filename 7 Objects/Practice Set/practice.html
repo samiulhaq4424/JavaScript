@@ -38,7 +38,7 @@
         if (product1 == product2) {//checking if reference/address of both objects are same
           return true;
         }
-        /*here we are not comparing delivery-time, if you want you can do*/
+        /*here we are not comparing "delivery-time", if you want you can do*/
         if (product1.name === product2.name && product1.size === product2.size && product1.fit === product2.fit) {
           return true;
         } else {
@@ -60,6 +60,7 @@
         "delivery-time": "Same day delivery",
       };
       let product4 = product2;
+      
       console.log(isIdenticalProduct(product, "")); //will give warning as we are not passing second object
       console.log(isIdenticalProduct(product, product)); //true as both have same reference
       console.log(isIdenticalProduct(product, product2)); //false
@@ -68,3 +69,4 @@
     </script>
   </body>
 </html>
+!

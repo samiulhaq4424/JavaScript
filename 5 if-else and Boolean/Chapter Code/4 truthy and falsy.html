@@ -15,6 +15,7 @@
       // let age=false; // printed: Aap avtaar hain (as false is falsy)
       // let age=""; // printed: Aap avtaar hain (as "" is falsy)
       // let age=null; // printed: Aap avtaar hain (as null is falsy)
+      // let age = 4 / 0; // console.log(age) will print "infinity" and output: "You have a valid age"
       let age = 4 / "horse"; // value of age=NAN which is falsy as 4 can't be divided by string 'horse'
       console.log(age);
       if (age) {

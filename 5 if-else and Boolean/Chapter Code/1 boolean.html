@@ -7,22 +7,23 @@
   </head>
   <body>
     <script>
-      console.log(typeof (6 > 9)); //it will give boolean
-      // console.log(typeof true); //it will give boolean
-      // console.log(typeof 'true');  //it will give string
+      console.log(typeof (6 > 9)); //it will give "boolean"
+      // console.log(typeof true); //it will give "boolean"
+      // console.log(typeof 'true');  //it will give "string"
 
       // console.log(!true); //false
       // console.log(!false); //true
 
+      
+
+      /* == (== is the loose equality operator) checks equality, similarly we have != */
+      // console.log(5 == 5.0); //true
+      // console.log(5 == '5.0'); //true ; The string '5.0' will be converted to a number
+      // console.log(5 == '5'); //true
       // console.log(5 == 5); //true
       // console.log(5 == 4); //false
 
-      /* ==  checks equality, similarly we have != */
-      // console.log(5 == 5.0); //true
-      // console.log(5 == '5.0'); //true
-      // console.log(5 == '5'); //true
-
-      /* === checks value and type equality, similarly we have !==  */
+      /* === (=== is the strict equality) checks value and type equality, similarly we have !==  */
       // console.log(5 == 5.0); //true
       // console.log(5 === '5'); //false
       // console.log(5 === '5.0'); //false
