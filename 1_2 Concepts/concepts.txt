@@ -2,7 +2,7 @@
 ->we can use "" or '' or `` for strings
 ->generally we will try to use '' or ``
 ->example: 
-a) 'Rs' + (100*2+50)
+a) 'Rs ' + (100*2+50)
     output: Rs 250
 
 ->for `` (it is backtick, below esc button):
@@ -34,7 +34,7 @@ output: 'number'
 -> typeof (11==11)
 output: 'boolean'
 _____________________________________________________________________________________________________
-The prompt() function in JavaScript is used to display a dialog box that prompts the user to input some text. The text that the user enters is returned as a string. If the user clicks "OK" without entering any text, an empty string ("") is returned. If the user clicks "Cancel," null is returned.
+The prompt() function in JavaScript is used to display a dialog box that prompts the user to input some text. The text that the user enters is returned as a "string". If the user clicks "OK" without entering any text, an empty string ("") is returned. If the user clicks "Cancel," null is returned.
 
 let userInput = prompt("Enter your number:");
 
@@ -44,5 +44,6 @@ console.log(userInput); // Output: "42"
 // If the user clicks "Cancel," the value of userInput will be null.
 console.log(userInput); // Output: null
 
-// If the user doesn't type anything and just clicks "OK," the value of userInput will be an empty string "".
+// If the user doesn't type anything and just clicks "OK," the value of userInput will be 
+an empty string "".
 console.log(userInput); // Output: ""
