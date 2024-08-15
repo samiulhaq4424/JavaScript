@@ -4,10 +4,11 @@
   <title>Practise Exercise</title>
 </head>
 <body>
-  <p id="name-display"></p>
+  <h1 id="name-display"></h1>
+  <h2 id="cart-value"></h2>
 
   <script>
-    const myName = 'Samiul Haque';
+    const myName = 'Hi, Samiul';
     document.querySelector('#name-display').innerText = myName; //putting content to <p>
     
     //some calculation which will be shown in console
@@ -18,6 +19,7 @@
 
     //using eval('') function --> it take input as string and do the calculation
     console.log('Using eval() method: ' + eval('2+3+5*7-9'));
+    document.querySelector("#cart-value").innerText = `Your cart value is Rs. ${eval(cartValue)}`;
   </script>
 </body>
 </html>
