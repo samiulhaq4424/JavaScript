@@ -36,7 +36,8 @@
   <h3 id="score"></h3>
 
   <!-- adding reset button, clear local storage and also resetScore() as if it is not used then when after pressing reset button, if you click again on bat, ball, stump button it will show garbage value -->
-  <button onclick="localStorage.clear();
+  <button onclick="
+      localStorage.clear();
       resetScore(); //here we are not passing any arguement to resetScore() as when it is called undefined will be passed to it as value and it's a falsy value so else part will be executed
   ">Reset</button>
 
