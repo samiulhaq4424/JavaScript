@@ -15,7 +15,7 @@
       /*******************************************************************/
 
       // let obj = { //object 'obj' created
-      //   lkj: 98
+      //   lkj: 98,
       // };
       // let doosra = [1, true, null, 'asdfasd', 'samiul haque', {likes: '1 Million'}]; //array doosra have object also in it
       // console.log(doosra[1]); //output: true
@@ -36,26 +36,28 @@
       // console.log(arr); // [1, 2, 3]
       // arr.push(6,7);
       // console.log(arr); // [1, 2, 3, 6, 7] - 6 & 7 added to end of array
-      // let num1 = arr.pop(); //returns last element which is popped i.e 6
+      // let num1 = arr.pop(); //returns last element which is popped i.e 7
       // console.log('popped ' + num1);
-      // console.log(arr); // [1, 2, 3] - last element 6 is popped
+      // console.log(arr); // [1, 2, 3, 6] - last element 7 is popped
 
-      // console.log('popped ' + arr.pop()); 
-      // console.log(arr); // [1, 2] - last element 3 is popped
+      // console.log('popped: ' + arr.pop()); 
+      // console.log(arr); // [1, 2, 3] - last element 6 is popped
 
 
       // console.log(arr.unshift(-2,-1,0)); //it adds element at the beginning, modifies the Array to [-2, -1, 0, 1, 2] and returns the New Length
-      // console.log(arr); // [-2, -1, 0, 1, 2]
+      // console.log(arr); // [-2, -1, 0, 1, 2, 3]
 
       // let num2 = arr.shift(); //removes the first element from an array and returns that removed element, i.e -2
       // console.log('element removed: ' + num2); // element removed: -2
-      // console.log(arr); // [-1, 0, 1, 2]
+      // console.log(arr); // [-1, 0, 1, 2, 3]
       // console.log('element removed: ' + arr.shift()); // element removed: -1
-      // console.log(arr); // [0, 1, 2]
+      // console.log(arr); // [0, 1, 2, 3]
 
       /*******************************************************************/
 
-      /*splice(start, deleteCount, item1, item2, ...., itemN): changes the contents of an array by removing or replacing existing elements and/or adding new elements in place and return an array containing the deleted elements.*/
+      /*
+        splice(start, deleteCount, item1, item2, ...., itemN): changes the contents of an array by removing or replacing existing elements and/or adding new elements in place and return an array containing the deleted elements.
+      */
 
       // let arr = [3,5,7,6,8,9];
       // console.log(arr); // [3, 5, 7, 6, 8, 9]
