@@ -44,6 +44,5 @@ console.log(userInput); // Output: "42"
 // If the user clicks "Cancel," the value of userInput will be null.
 console.log(userInput); // Output: null
 
-// If the user doesn't type anything and just clicks "OK," the value of userInput will be 
-an empty string "".
+// If the user doesn't type anything and just clicks "OK," the value of userInput will be an empty string "".
 console.log(userInput); // Output: ""

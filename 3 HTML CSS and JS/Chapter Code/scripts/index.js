@@ -1,4 +1,4 @@
-/*here pop-up will show but this message i.e hi sam! will not be there in console*/
+/*here pop-up will show but this message i.e Hi sam! will not be there in console*/
 alert("Hi sam!");
 
 /*here pop-up will not show but this message i.e hi bro..! will be there in console*/

@@ -15,6 +15,20 @@
     <h1 class="heading">Hi Samiul</h1>
     <button id="click-me" onclick="alert('I am clicked')">Click me</button>
     <br />
+    <input id="input1" type="text" minlength="4" maxlength="8" size="10" required onkeydown="alert('I am pressed')">
+    <!-- 
+          minlength="4": Sets the minimum number of characters required in the input field to 4.
+          maxlength="8": Limits the maximum number of characters allowed in the input field to 8.
+          size="10": Specifies the width of the input field, indicating it should be wide enough to display 10 characters. 
+
+          eg)
+          <form id="nameForm">
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10" />
+            <input type="submit" value="Submit">
+          </form>
+    -->
+    <br />
     
     <!-- script tag is written at the end of body -->
     <script src="./scripts/index.js"></script>
