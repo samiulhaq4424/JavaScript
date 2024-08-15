@@ -1,6 +1,6 @@
-/*
-  * It centers all inline elements (like text, images, and inline-block elements) within their parent containers across the entire page. This does not center block-level elements like divs themselves, but it does center the content inside those elements.
-  * Text and Inline Elements: Any text or inline elements (like <span>, <img>, or inline-block elements)    within block-level containers (like <div>, <p>, etc.) will be centered horizontally within their parent containers.
+/**
+  * text-align: center; centers all inline elements (like text, images and inline-block elements) within their parent containers across the entire page. This does not center block-level elements like divs themselves, but it does center the content inside those elements.
+  * Text and Inline Elements: Any text or inline elements (like <span>, <img>, or inline-block elements) within block-level containers (like <div>, <p>, etc.) will be centered horizontally within their parent containers.
   * Block-Level Elements: Block-level elements themselves (like <div>, <section>, <header>, etc.) are not centered on the page. They remain aligned to the left (the default behavior) unless you explicitly apply a different centering method, such as using margin: auto;, Flexbox, or CSS Grid.
 */
 body { /*see the note above*/
