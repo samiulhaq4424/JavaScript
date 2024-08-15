@@ -24,11 +24,11 @@
         - consider null, undefined, false, "", NAN, 0 (i.e everyrthing as falsy)
         - use when a fallback value is needed
       */
-      let age = 0; /*as age=0 is a falsy value, so finalAge=falsy||18 = 18*/
+      let age = 0; /* as age=0 is a falsy value, so finalAge=falsy||18 = 18 */
       /* for let age; since it is undefined, finalAge will be 18 */
       let finalAge = age || 18;
-      console.log(age);
-      console.log(finalAge);
+      console.log(age); // 0
+      console.log(finalAge); // 18
 
       /* 
         - Default operator: value ?? fallbackValue
