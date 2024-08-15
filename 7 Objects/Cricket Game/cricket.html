@@ -35,7 +35,8 @@
       lost: 0,
       tie: 0,
       displayScore: function() {
-        return `No of matches Won:${score.win}, Lost:${score.lost}, Tie: ${score.tie}`;
+        // console.log(this.lost);
+        return `No of matches Won:${score.win}, Lost:${this.lost}, Tie: ${score.tie}`; //use score or this
       }
     };
 

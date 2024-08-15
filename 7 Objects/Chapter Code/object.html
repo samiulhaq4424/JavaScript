@@ -17,6 +17,9 @@
       // console.log(product.item_name);
       // product.company = 'Banana';
       // console.log(product);
+      // let property1 = 'item_name'; ////will give 'undefined' as ye ab 'property1' ko as a property treat kar raha hai as we are using dot notation
+      // console.log(product.property1); //undefined
+      // console.log(product[property1]);
 
       /**************************************************************************************************/
 
@@ -26,7 +29,7 @@
       //   'item-name' : 'T-shirt', //yaha property 'item-name' is not following naming convention, so write such name in ''
       // };
 
-      // /* In JavaScript, when an object property name contains special characters like hyphens ('-'), it must be accessed using bracket notation instead of dot notation. */
+      // /* In JavaScript, when an object property name contains special characters like hyphens ('-'),etc. , it must be accessed using bracket notation instead of dot notation. */
       // console.log(product['item-name']);
 
       // /*JavaScript interprets 'item-name' as a subtraction operation ('item' minus 'name'), which results in 'NaN' (Not-a-Number). This is why you're seeing NaN in the console.*/
@@ -61,7 +64,7 @@
       // console.log("samiulhaque".length); //output: 11
       // console.log("This is js".toUpperCase()); //output: THIS IS JS (using toUpperCase())
       // console.log("This is js".toLowerCase()); //output: this is js (using toLowerCase())
-      // console.log("This is js".replace("js", "object in js")); //output: This is object in js (using replace('x','y'))
+      // console.log("This is js".replace("js", "JavaScript")); //output: This is object in js (using replace('x','y'))
 
       /**************************************************************************************************/
 
@@ -88,15 +91,18 @@
 
       /*object shortcuts*/
 
-      // let product = {
-      //   company: "Mango",
-      //   price: 861,
-      //   "item-name": "T-shirt",
-      // };
+      let product = {
+        company: "Mango",
+        price: 861,
+        "item-name": "T-shirt",
+      };
 
-      // let { company, price } = product; //destructring, here let {comapny, price} having same name as object's company and price, so it is trying to get the value of company and price from object product 
-      // console.log(company);
-      // console.log(price);
+      let { company, price, "item-name":item } = product; //destructring, here let {comapny, price, "item-name":item} having same name as object's company and price, so it is trying to get the value of company and price from object product 
+      let item_val = product["item-name"]; //other way to access item-name from product
+      console.log(company);
+      console.log(price);
+      console.log(item);
+      console.log(item_val);
     </script>
   </body>
 </html>
