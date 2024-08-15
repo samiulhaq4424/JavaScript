@@ -1,20 +1,20 @@
 let todoList = [ //array: todoList- it is an 'array of objects', here we are putting default values to array(optional)- you can comment them
-  {
-    item: 'Buy Milk',
-    dueDate: '4/10/2023'
-  },
-  {
-    item: 'Go to College',
-    dueDate: '4/10/2023'
-  }
+  // {
+  //   item: 'Buy Milk',
+  //   dueDate: '4/10/2023'
+  // },
+  // {
+  //   item: 'Go to College',
+  //   dueDate: '4/10/2023'
+  // }
 ];
 
-displayItems();
+// displayItems();
 
 function addTodo() {
   let inputElement = document.querySelector('#todo-input');
   let dateElement = document.querySelector('#todo-date');
-  let todoItem = inputElement.value; //to take value <input/>
+  let todoItem = inputElement.value; //to take value of <input/>
   let todoDate = dateElement.value;
   // console.log(todoItem); //just to see the value in the console
   // console.log(todoDate);
@@ -41,7 +41,7 @@ function displayItems() {
     newHtml += `
       <span>${item}</span> 
       <span>${dueDate}</span>
-      <button class='btn-delete' onclick="todoList.splice(${i}, 1); ;">Delete</button>`;
+      <button class='btn-delete' onclick="deleteItem(${i})">Delete</button>`;
   }
   /**
   * above if you write: 
@@ -49,4 +49,9 @@ function displayItems() {
   * the use of 'i' within the onclick attribute is problematic due to JavaScript's scoping rules. The 'i' in todoList.splice(i, 1) is not recognized as the loop index inside the onclick attribute. It is treated as a literal string, not a variable from the loop.
   */
   containerElement.innerHTML = newHtml;
+}
+
+let deleteItem=(index)=>{
+  todoList.splice(index, 1); //to delete element at particular index
+  displayItems();
 }

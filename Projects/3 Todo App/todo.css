@@ -3,7 +3,7 @@ body {
 }
 
 #main-heading {
-  text-align: center;
+  margin-left: 120px;
 }
 
 .grid-container {
@@ -12,7 +12,6 @@ body {
   column-gap: 10px;
   row-gap: 10px;
   margin-top: 10px;
-  align-items: center; /*sab items center of each cell me rahega in column*/
 }
 
 #todo-input, #todo-date {
