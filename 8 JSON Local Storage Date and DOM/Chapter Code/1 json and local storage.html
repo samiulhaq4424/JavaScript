@@ -5,8 +5,8 @@
     <!-- 
         1) Fullform of JSON: JavaScript Object Notation 
         2) JSON.stringify() : When receiving data from a web server, the data is always a string. Parse the data with JSON.parse(), and the data becomes a JavaScript object.
-        3)JSON.parse() : When sending data to a web server, the data has to be a string. Convert a JavaScript object into a string   with JSON.stringify().
-  -->
+        3)JSON.parse() : When sending data to a web server, the data has to be a string. Convert a JavaScript object into a string with JSON.stringify().
+    -->
   </head>
   <body>
     <script>
@@ -47,7 +47,7 @@
 
       localStorage.setItem('product', JSON.stringify(product)); //converted to string as both parameters should be string
       let product2 = JSON.parse(localStorage.getItem('product')); // to get the string {"name":"TShirt","price":789,"rating":{"stars":4.5,"noOfReviews":453}} from local storage and converting it to JavaScript object
-      console.log(product2);
+      console.log(product2); //object
 
       localStorage.removeItem('Price'); //to remove item from local storage
       // localStorage.clear(); //to clear the entire local storage
