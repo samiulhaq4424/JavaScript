@@ -5,7 +5,7 @@
   <style>
     .btn-subscribe {
       font-size: 15px;
-      height: 20px;
+      height: 30px;
       width: 80px;
       background-color: rgb(217, 17, 17);
       color: white;
@@ -29,7 +29,7 @@
 
 
     let printGreeting = () => console.log('Hi Samiul');
-    let runTwice = inputFunction => { 
+    let runTwice = (inputFunction) => { 
       inputFunction(); //giving function: printGreeting() as arguement
       inputFunction();
     };
@@ -38,7 +38,7 @@
 
 
     let buttonElement = document.querySelector('.btn-subscribe');
-    buttonElement.addEventListener('click', event => setTimeout(doubleTheSize, 2000));
+    buttonElement.addEventListener('click', () => setTimeout(doubleTheSize, 1000));
     function doubleTheSize() {
       let buttonElement = document.querySelector('.btn-subscribe');
       buttonElement.classList.add('js-size-double'); 

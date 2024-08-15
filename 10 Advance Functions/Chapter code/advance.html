@@ -8,27 +8,27 @@
 
   <script>
     /**********************Anonymous functions as values**********************/
-    let sum = function(num1, num2) {
-      return num1 + num2;
-    };
-    console.log(`sum of two nos is: ${sum(4, 5)}`); //output: 9
-    let newSum = sum; //sum is a reference to the function, now the function have two references i.e sum and newSum
-    console.log(`sum of two nos is: ${newSum(4, 5)}`); //output: 9
+    // let sum = function(num1, num2) {
+    //   return num1 + num2;
+    // };
+    // console.log(`sum of two nos is: ${sum(4, 5)}`); //output: 9
+    // let newSum = sum; //sum is a reference to the function, now the function have two references i.e sum and newSum
+    // console.log(`sum of two nos is: ${newSum(4, 5)}`); //output: 9
 
-    let sumThreeNumbers = function(num1, num2, num3, sumTwoNumbers) { //to add 3 nos by passing reference of 'sum' function in the arguement as 'sumTwoNumbers' which is a refernce to function 'sum'; using this concept ((a + b) + c), here
-      let sum1 = sumTwoNumbers(num1, num2); //(num1 + num2)
-      return sumTwoNumbers(sum1, num3); //(sum1 + num2)
-    }
-    console.log(`sum of 3 nos is ${sumThreeNumbers(4,5,6, sum)}`); //output: 15
-    console.log(sumThreeNumbers); // in console it will print the function as whole
-    console.log(typeof sumThreeNumbers); //output: function
+    // let sumThreeNumbers = function(num1, num2, num3, sumTwoNumbers) { //to add 3 nos by passing reference of 'sum' function in the arguement as 'sumTwoNumbers' which is a refernce to function 'sum'; using this concept ((a + b) + c), here
+    //   let sum1 = sumTwoNumbers(num1, num2); //(num1 + num2)
+    //   return sumTwoNumbers(sum1, num3); //(sum1 + num2)
+    // }
+    // console.log(`sum of 3 nos is ${sumThreeNumbers(4,5,6, sum)}`); //output: 15
+    // console.log(sumThreeNumbers); // in console it will print the function as whole
+    // console.log(typeof sumThreeNumbers); //output: function
     /*************************************************************************/
     
 
     /************************Arrow Functions***********************************/
     // let sum = (num1, num2) => {
     //   return num1 + num2;
-    // }
+    // };
     // console.log(sum(6,8)); //output: 14
 
     // // let square = (num) =>{
@@ -58,9 +58,10 @@
      * clearTimeout(timerId); cancels the timeout that was scheduled. Because clearTimeout is called immediately after scheduling the timeout, the alarm function will not execute (to see the message of setTimeout, comment this line)
     */
     // let alarm = () => console.log(`Subaha ho gayi, uth jaao. ${new Date()}`);
-    // let timerId = setTimeout(alarm, 10000); //1000ms is 1sec and here donot write alarm(), pass the refernce to function i.e alarm
+    // let timerId = setTimeout(alarm, 1000); //1000ms is 1sec and here donot write alarm(), pass the refernce to function i.e alarm
     // console.log(`Alarm set with timerID: ${timerId}`);
-    // clearTimeout(timerId); 
+    // // clearTimeout(timerId); 
+    // setTimeout(()=>clearTimeout(timerId),1500);
 
     /**
     * setInterval is used to repeatedly call the alarm2 function every 1000 milliseconds (1 second). setInterval returns an intervalId, a unique identifier for this interval. This ID is used to control or stop the interval later.
@@ -77,13 +78,21 @@
 
     // let buttonElement = document.querySelector('#my-button');
     
-    // let behaviour = event => console.log('I am clicked');// 'behaviour' is a reference to function 'event'
+    // let behaviour = () => console.log('I am clicked');
+    // let printDate = () => console.log(new Date());
+
     // buttonElement.addEventListener('click', behaviour);
-
-    // let printDate = event => console.log(new Date());
     // buttonElement.addEventListener('click', printDate); //now click has more than 1 event listener (can have more than 1 event listener for an event)
-    // // buttonElement.removeEventListener('click', behaviour); // syntax: removeEventListener('event', reference to function) and removing 1 event i.e behaviour
 
+    // /* other way:
+    //     buttonElement.addEventListener('click', () => {
+    //         behaviour();  // Call the first function
+    //         printDate();  // Call the second function
+    //     });
+    // */
+
+    // // buttonElement.removeEventListener('click', behaviour); // syntax: removeEventListener('event', reference to function) and removing 1 event i.e behaviour
+    // // NOTE: see different types of EventListener
     /*************************************************************************/
 
 
@@ -99,12 +108,13 @@
     // {
     //   console.log(num); //output: 3,5,7,9
     // })
+    // console.log('\n');
 
     // arr.forEach((num) =>
     // {
     //   console.log(num); //output: 3,5,7,9 (same as above)
     // })
-
+    // console.log('\n');
 
     
     // let arr1 = [1,2,3,4,5,6,7,8,9];
@@ -119,8 +129,9 @@
     // }
     // search(arr1, 7); //output: Element found at index: 6
     // search(arr1, 10); //output: Element was not found
+    // console.log('\n');
 
-    // arr1.forEach(num => { 
+    // arr1.forEach((num) => { 
     //   if (num === 5) {
     //     return;
     //   }
@@ -142,27 +153,27 @@
      * Use: Transforms each element
     */
 
-    // let arr = [1,2,3,4,5,6,7,8,9];
-    // let odds = arr.filter((num, index) => { //to find odd nos in array
-    //   if (num % 2 === 1) {
-    //     return true;
-    //   } else {
-    //     return false;
-    //   }
-    // });
-    // console.log(odds);
+    let arr = [1,2,3,4,5,6,7,8,9];
+    let odds = arr.filter((num, index) => { //to find odd nos in array
+      if (num % 2 === 1) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    console.log(odds);
 
-    // let newOdds = arr.filter((num, index) => { //same as above for odds, can also write as: arr.filter((num, index) => num%2==1);
-    //    return num % 2 === 1;
-    // });
-    // console.log(newOdds);
+    let newOdds = arr.filter((num) => { //same as above for odds, can also write as: arr.filter((num, index) => num%2==1);
+       return num % 2 === 1;
+    });
+    console.log(newOdds);
 
 
-    // let arr1 = [1,2,3,4,5];
-    // let squares = arr1.map((num) => num*num);
-    // console.log(squares); //output: [1, 4, 9, 16, 25]
-    // let evenNo = arr1.map((num) => num%2==0);
-    // console.log(evenNo); //output: [false, true, false, true, false], it is not giving [2,4]
+    let arr1 = [1,2,3,4,5];
+    let squares = arr1.map((num) => num*num);
+    console.log(squares); //output: [1, 4, 9, 16, 25]
+    let evenNo = arr1.map((num) => num%2==0);
+    console.log(evenNo); //output: [false, true, false, true, false], it is not giving [2,4]
     
   </script>
 </body>
