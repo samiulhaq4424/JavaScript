@@ -27,10 +27,11 @@
       // console.log(typeof doosra); //output: object (array is a special type of object)
       // console.log(doosra.length);//output: 6
 
-      console.log(doosra.includes(1));
-      console.log(doosra.includes('samiul haque'));
-      console.log(doosra.includes(true));
-      console.log(doosra.includes({likes: '1 Million'}));
+      console.log(doosra.includes(1)); //true
+      console.log(doosra.includes('samiul haque')); //true
+      console.log(doosra.includes(true)); //true
+      console.log(doosra.includes({likes: '1 Million'})); //creating a new object {likes: '1 Million'}, which has the same properties and values but is a different instance in memory. JavaScript does not consider these two objects to be the same, hence includes returns "false".
+      
 
 
       console.log(Array.isArray(doosra)); //output: true (to check if a variable/object is an array: Array.isArray(name of variable))
