@@ -14,10 +14,10 @@
 
       /*******************************************************************/
 
-      // let obj = { //object 'obj' created
-      //   lkj: 98,
-      // };
-      // let doosra = [1, true, null, 'asdfasd', 'samiul haque', {likes: '1 Million'}]; //array doosra have object also in it
+      let obj = { //object 'obj' created
+        lkj: 98,
+      };
+      let doosra = [1, true, null, 'asdfasd', 'samiul haque', {likes: '1 Million'}]; //array doosra have object also in it
       // console.log(doosra[1]); //output: true
       // console.log(doosra[2]); //output: null
       // console.log(doosra[3]); //output: asdfasd
@@ -27,8 +27,14 @@
       // console.log(typeof doosra); //output: object (array is a special type of object)
       // console.log(doosra.length);//output: 6
 
-      // console.log(Array.isArray(doosra)); //output: true (to check if a variable/object is an array: Array.isArray(name of variable))
-      // console.log(Array.isArray(obj)); //output: false (as obj is an object which is not an array)
+      console.log(doosra.includes(1));
+      console.log(doosra.includes('samiul haque'));
+      console.log(doosra.includes(true));
+      console.log(doosra.includes({likes: '1 Million'}));
+
+
+      console.log(Array.isArray(doosra)); //output: true (to check if a variable/object is an array: Array.isArray(name of variable))
+      console.log(Array.isArray(obj)); //output: false (as obj is an object which is not an array)
 
       /*******************************************************************/
       
