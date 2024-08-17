@@ -14,10 +14,10 @@
 
       /*******************************************************************/
 
-      let obj = { //object 'obj' created
-        lkj: 98,
-      };
-      let doosra = [1, true, null, 'asdfasd', 'samiul haque', {likes: '1 Million'}]; //array doosra have object also in it
+      // let obj = { //object 'obj' created
+      //   lkj: 98,
+      // };
+      // let doosra = [1, true, null, 'asdfasd', 'samiul haque', {likes: '1 Million'}]; //array doosra have object also in it
       // console.log(doosra[1]); //output: true
       // console.log(doosra[2]); //output: null
       // console.log(doosra[3]); //output: asdfasd
@@ -27,16 +27,16 @@
       // console.log(typeof doosra); //output: object (array is a special type of object)
       // console.log(doosra.length);//output: 6
 
-      console.log(doosra.includes(1)); //true
-      console.log(doosra.includes('samiul haque')); //true
-      console.log(doosra.includes(true)); //true
-      console.log(doosra.includes({likes: '1 Million'})); //creating a new object {likes: '1 Million'}, which has the same properties and values but is a different instance in memory. JavaScript does not consider these two objects to be the same, hence includes returns "false".
-      let hasObject = doosra.some((item) => (typeof item) === 'object' && item !== null && item.likes === '1 Million'); //some iterates over each item in the doosra array.
-      console.log(hasObject); // true
+      // console.log(doosra.includes(1)); //true
+      // console.log(doosra.includes('samiul haque')); //true
+      // console.log(doosra.includes(true)); //true
+      // console.log(doosra.includes({likes: '1 Million'})); //creating a new object {likes: '1 Million'}, which has the same properties and values but is a different instance in memory. JavaScript does not consider these two objects to be the same, hence includes returns "false".
+      // let hasObject = doosra.some((item) => (typeof item) === 'object' && item !== null && item.likes === '1 Million'); //some iterates over each item in the doosra array.
+      // console.log(hasObject); // true
 
 
-      console.log(Array.isArray(doosra)); //output: true (to check if a variable/object is an array: Array.isArray(name of variable))
-      console.log(Array.isArray(obj)); //output: false (as obj is an object which is not an array)
+      // console.log(Array.isArray(doosra)); //output: true (to check if a variable/object is an array: Array.isArray(name of variable))
+      // console.log(Array.isArray(obj)); //output: false (as obj is an object which is not an array)
 
       /*******************************************************************/
       
