@@ -153,27 +153,39 @@
      * Use: Transforms each element
     */
 
-    let arr = [1,2,3,4,5,6,7,8,9,10,11];
-    let odds = arr.filter((num, index) => { //to find odd nos in array
-      if (num % 2 === 1) {
-        return true;
-      } else {
-        return false;
-      }
-    });
-    console.log(odds);
+    // let arr = [1,2,3,4,5,6,7,8,9,10,11];
+    // let odds = arr.filter((num, index) => { //to find odd nos in array
+    //   if (num % 2 === 1) {
+    //     return true;
+    //   } else {
+    //     return false;
+    //   }
+    // });
+    // console.log(odds);
 
-    let newOdds = arr.filter((num) => { //same as above for odds, can also write as: arr.filter((num, index) => num%2==1);
-       return num % 2 === 1;
-    });
-    console.log(newOdds);
+    // let newOdds = arr.filter((num) => { //same as above for odds, can also write as: arr.filter((num, index) => num%2==1);
+    //    return num % 2 === 1;
+    // });
+    // console.log(newOdds);
 
 
-    let arr1 = [1,2,3,4,5];
-    let squares = arr1.map((num) => num*num);
-    console.log(squares); //output: [1, 4, 9, 16, 25]
-    let evenNo = arr1.map((num) => num%2==0);
-    console.log(evenNo); //output: [false, true, false, true, false], it is not giving [2,4]
+    // let arr1 = [1,2,3,4,5];
+    // let squares = arr1.map((num) => num*num);
+    // console.log(squares); //output: [1, 4, 9, 16, 25]
+    // let evenNo = arr1.map((num) => num%2==0);
+    // console.log(evenNo); //output: [false, true, false, true, false], it is not giving [2,4]
+
+    /************************Number() : used to convert a given value to a number**********************/
+    
+    console.log(Number("123")); // 123, here "123" is a string
+    console.log(Number("123.45")); // 123.45
+    console.log(Number("abc")); // NaN
+    console.log(Number("123abc")); // NaN
+    console.log(Number(true)); // 1
+    console.log(Number(false)); // 0
+    console.log(Number("")); // 0
+    console.log(Number(null)); // 0
+    console.log(Number(undefined)); // NaN
     
   </script>
 </body>
